@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "wingbank",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "kheang",
+          "database_id": "8d4d076e-75ee-4eb9-80fc-69912e5734a4"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "017ef3dc85d14a92a3bbcdf683eea0a9",
+            "binding": "SECRET",
+            "secret_name": "wingbank"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
